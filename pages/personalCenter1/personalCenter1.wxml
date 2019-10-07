@@ -1,0 +1,48 @@
+<view class = "container">
+      <view class = "userInfo">
+          <image class="avatar" src='{{userInfo.avatarUrl}}' class="userInfo-image" ></image >
+          <view class='name'><text class="nickname">{{userInfo.nickName}}</text></view>
+      </view>
+       <view class ="line_sec"></view>
+
+      <view class="separate">
+        <block wx:for-items="{{orderItems}}" wx:key="name">
+              <view class="nav-item_sec" data-type="{{item.name}}" data-typeid="{                 {item.typeId}}" catchtap="{{item.tocatch}}">
+                  <image src="{{item.imageurl}}" class="nav-image" />
+                  <text class="nav-item_sec_2">{{item.name}}</text>
+              </view>
+          </block>
+      </view>
+
+      <view class ="line"></view>
+
+      <view class="separate_sec">
+          <view class="order" catchtap="toSetting">
+               <image src="../../images/icon/order.png" class="nav-image"></image>
+                <text class="nav-item">我的订单</text>
+          </view>
+          <view class ="line_sec"></view>
+          <view class="shopping" catchtap="toSetting">
+                <image src="../../images/icon/gouwuche.png" class="nav-image"></image>
+                <text class="nav-item">购物车</text>
+          </view>
+          <view class ="line_sec" catchtap="toSetting"></view>
+          <view class="coupon">
+                <image src="../../images/icon/yhq.png" class="nav-image"></image>
+                <text class="nav-item">优惠券</text>
+          </view>
+      </view>
+
+      <view class ="line"></view>
+
+      <!-- <view class="separate_thr"> -->
+      <!-- </view> -->
+
+      <view class="setting" catchtap="toSetting">
+            <image src="../../images/icon/setting.png" class="nav-image"></image>
+            <text class="nav-item">设置</text>
+      </view>
+
+      <view class ="line"></view>
+      <button class="share" open-type="share" ><image src="../../images/icon/share.png" class="nav-image"></image>分享</button>
+</view>

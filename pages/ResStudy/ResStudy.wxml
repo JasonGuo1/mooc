@@ -1,0 +1,20 @@
+<view class="body">
+    <view class="title">最近学习</view>
+    <view class="line2"></view>
+    <view   wx:for="{{RSList}}" wx:key="{{index1}}">
+        <view class="RS">
+        <view class="RS_img">
+          <view class="RS_img_text">{{item.text1}}</view>
+          <progress percent = "{{item.pro}}" show-info="true" color="red" stroke-width="10" activeColor="green" backgroundColor="#ccc" />
+        </view>
+        <view class="line"></view>
+        <view class="RS_S1">
+          <view>笔记</view>
+          <view>{{item.text2}}</view>   
+        </view>
+        <view class="line"></view>
+        <view class="RS_S3" catchtap="{{item.tocatch}}">继续学习</view>
+        </view>
+        <view class="line2"></view>
+    </view>
+</view>
